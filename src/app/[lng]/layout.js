@@ -1,6 +1,9 @@
 import { dir } from "i18next"
 
-const languages = ["ja", "en"]
+import { languages } from "../i18n/settings"
+
+// ↑外部ファイルから読み込むために↓削除します
+// const languages = ["ja", "en"]
 
 export async function generateStaticParams() {
   return languages.map((lng) => ({ lng }))
